@@ -8,7 +8,7 @@ public class Car {
     int branchNum;
     CarModel carModel;
     float kilometers;
-    int carNum;
+    double carNum;
 
     public Car() {//empty constructor
         this.branchNum =0 ;
