@@ -5,7 +5,7 @@ package com.example.mailo.takengo.models.entities;
  */
 
 public class Customer {
-        String familyName;
+        String family_git Name;
         String privateName;
         int idNum;
         int phoneNum;
