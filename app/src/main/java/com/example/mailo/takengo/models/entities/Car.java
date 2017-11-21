@@ -6,13 +6,13 @@ package com.example.mailo.takengo.models.entities;
 
 public class Car {
     int branchNum;
-    int carModel;
+    CarModel carModel;
     float kilometers;
     int carNum;
 
     public Car() {//empty constructor
         this.branchNum =0 ;
-        this.carModel = 0;
+        this.carModel = new CarModel();
         this.kilometers =0 ;
         this.carNum =0 ;
     }
@@ -25,7 +25,7 @@ public class Car {
      */
 
 
-    public Car(int branchNum, int carModel, float kilometers, int carNum) {//parameter constructor
+    public Car(int branchNum, CarModel carModel, float kilometers, int carNum) {//parameter constructor
         this.branchNum = branchNum;
         this.carModel = carModel;
         this.kilometers = kilometers;
@@ -44,11 +44,11 @@ public class Car {
         this.branchNum = branchNum;
     }
 
-    public int getCarModel() {
+    public CarModel getCarModel() {
         return carModel;
     }
 
-    public void setCarModel(int carModel) {
+    public void setCarModel(CarModel carModel) {
         this.carModel = carModel;
     }
 
