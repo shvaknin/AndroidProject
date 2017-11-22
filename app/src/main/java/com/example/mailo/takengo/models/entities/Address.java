@@ -12,7 +12,7 @@ public class Address {
     public Address() {//empty Constructor
         this.city ="" ;
         this.street = "";
-        this.number = 4;
+        this.number = 0;
     }
     /**
      * Constructor
