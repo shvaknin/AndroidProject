@@ -5,38 +5,26 @@ package com.example.mailo.takengo.models.entities;
  */
 
 public class Branch {
-    Address address;
     int numOfParkingSpaces;
     int numBranch;
+    String city;
+    String street;
+    int number;
 
-
-    public Branch(){//empty Constructor
-        this.address = new Address();
-        this.numOfParkingSpaces =0 ;
+    public Branch() {
+        this.numOfParkingSpaces = 0;
         this.numBranch = 0;
+        this.city = "";
+        this.street = "";
+        this.number = 0;
     }
-    /**
-     * Constructor
-     * @param address
-     * @param numOfParkingSpaces
-     * @param numBranch
-     */
 
-    public Branch(Address address, int numOfParkingSpaces, int numBranch) {//parameter Constructor
-        this.address = address;
+    public Branch(int numOfParkingSpaces, int numBranch, String city, String street, int number) {
         this.numOfParkingSpaces = numOfParkingSpaces;
         this.numBranch = numBranch;
-    }
-
-    /**
-     *Getter & Setter
-     */
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
+        this.city = city;
+        this.street = street;
+        this.number = number;
     }
 
     public int getNumOfParkingSpaces() {
@@ -45,6 +33,30 @@ public class Branch {
 
     public void setNumOfParkingSpaces(int numOfParkingSpaces) {
         this.numOfParkingSpaces = numOfParkingSpaces;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public int getNumBranch() {

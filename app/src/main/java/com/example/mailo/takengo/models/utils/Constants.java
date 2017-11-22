@@ -9,15 +9,19 @@ import com.example.mailo.takengo.models.entities.*;
 
 public class Constants {
 
-    public static class AddressConst{
+  /**  public static class AddressConst{
         public static final String CITY="city";
         public static final String STREET="street";
         public static final String NUMBER="number";
     }
+   */
     public static class BranchConst{
         public static final String ADDRESS="address";
         public static final String NUM_OF_PARKING_SPACES="numOfParkingSpaces";
         public static final String NUM_BRANCH="numBranch";
+        public static final String CITY="city";
+        public static final String STREET="street";
+        public static final String NUMBER="number";
     }
     public static class CarConst{
         public static final String BRANCH_NUM="branchNum";
@@ -62,7 +66,7 @@ public class Constants {
         user.setPassword(contentValues.getAsString(Constants.UserConst.PASSWORD));
         return user;
     }
-    public static ContentValues AddressToContentValues(Address address){
+ /**   public static ContentValues AddressToContentValues(Address address){
         ContentValues contentValues = new ContentValues();
         contentValues.put(Constants.AddressConst.CITY,address.getCity());
         contentValues.put(Constants.AddressConst.STREET,address.getStreet());
@@ -76,17 +80,21 @@ public class Constants {
         address.setNumber(contentValues.getAsInteger(Constants.AddressConst.NUMBER));
         return address;
     }
-
+*/
     public static ContentValues BranchToContentValues(Branch branch){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Constants.BranchConst.ADDRESS,branch.getAddress().toString());//what to do when the tipe isnt simple?
+        contentValues.put(BranchConst.CITY,branch.getCity());
+        contentValues.put(BranchConst.NUMBER,branch.getNumber());
+        contentValues.put(BranchConst.STREET,branch.getStreet());
         contentValues.put(Constants.BranchConst.NUM_OF_PARKING_SPACES,branch.getNumOfParkingSpaces());
         contentValues.put(Constants.BranchConst.NUM_BRANCH,branch.getNumBranch());
         return contentValues;
     }
     public static Branch ContentValuesToBranch(ContentValues contentValues) {
         Branch branch = new Branch();
-        branch.setAddress(contentValues.getAsAddress(Constants.BranchConst.ADDRESS));
+        branch.setCity(contentValues.getAsString(BranchConst.CITY));
+        branch.setNumber(contentValues.getAsInteger(BranchConst.NUMBER));
+        branch.setStreet(contentValues.getAsString(BranchConst.STREET));
         branch.setNumOfParkingSpaces(contentValues.getAsInteger(Constants.BranchConst.NUM_OF_PARKING_SPACES));
         branch.setNumBranch(contentValues.getAsInteger(Constants.BranchConst.NUM_BRANCH));
         return branch;}
@@ -94,7 +102,7 @@ public class Constants {
     public static ContentValues CarToContentValues(Car car){
         ContentValues contentValues = new ContentValues();
         contentValues.put(Constants.CarConst.BRANCH_NUM,car.getBranchNum());
-        contentValues.put(Constants.CarConst.CAR_MODEL,car.getCarModel().toString());//car.getCarModel()//what to do when the tipe isnt simple?
+        contentValues.put(Constants.CarConst.CAR_MODEL,car.getCarModel());
         contentValues.put(Constants.CarConst.KILOMATERS,car.getKilometers());
         contentValues.put(Constants.CarConst.CAR_NUM,car.getCarNum());
         return contentValues;
@@ -102,7 +110,7 @@ public class Constants {
     public static Car ContentValuesToCar(ContentValues contentValues) {
         Car car = new Car();
         car.setBranchNum(contentValues.getAsInteger(Constants.CarConst.BRANCH_NUM));
-        car.setCarModel(contentValues.getAsCarModel(Constants.CarConst.CAR_MODEL));
+        car.setCarModel(contentValues.getAsInteger(Constants.CarConst.CAR_MODEL));
         car.setKilometers(contentValues.getAsInteger(Constants.CarConst.KILOMATERS));
         car.setCarNum(contentValues.getAsInteger(Constants.CarConst.CAR_NUM));
         return car;
@@ -124,7 +132,7 @@ public class Constants {
         carModel.setCompanyName(contentValues.getAsString(Constants.CarModelConst.COMPANY_NAME));
         carModel.setModelName(contentValues.getAsString(Constants.CarModelConst.MODEL_NAME));
         carModel.setEngineCapacity(contentValues.getAsFloat(Constants.CarModelConst.ENGINE_CAPACITY));
-        carModel.setGearbox(contentValues.getAsGearbox(Constants.CarModelConst.GEARBOX));
+        carModel.setGearbox(Gearbox.valueOf(contentValues.getAsString(Constants.CarModelConst.GEARBOX)));
         carModel.setSeats(contentValues.getAsInteger(Constants.CarModelConst.SEATS));
         return carModel;}
 
