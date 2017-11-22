@@ -21,5 +21,5 @@ public interface IDBManager {
     public List<User> getUsers();
     public List<Branch> getBranches();
     public List<Car> getCars();
-    public int i();
+
 }
