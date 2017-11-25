@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">takengo</string>
-
+    <string name="app_name">Take And Go</string>
+    <string name="Login">Login</string>
+    <string name="TakeAndGo">Take And Go</string>
+    <string name="EnterName">Enter Name</string>
+    <string name="login">login</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Password">Password</string>
 </resources>
