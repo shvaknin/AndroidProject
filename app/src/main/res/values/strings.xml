@@ -1,9 +1,42 @@
 <resources>
-    <string name="app_name">Take And Go</string>
+    <string name="app_name">TakenGo</string>
     <string name="Login">Login</string>
-    <string name="TakeAndGo">Take And Go</string>
-    <string name="EnterName">Enter Name</string>
+    <string name="TakeAndGo">TakenGo</string>
+    <string name="EnterName">Enter Name:</string>
     <string name="login">login</string>
-    <string name="Cancel">Cancel</string>
-    <string name="Password">Password</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="Password">Password:</string>
+    <string name="main">Main</string>
+    <string name="customer">Customer</string>
+    <string name="cars">Cars</string>
+    <string name="welcome">Welcome</string>
+    <string name="models">Models</string>
+    <string name="branches">Branches</string>
+    <string name="car_num">car Num</string>
+    <string name="car_model">car Model</string>
+    <string name="branch_num">branch Num</string>
+    <string name="kilometers">kilometers</string>
+    <string name="customers">customers</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="show_customers">Show Customers</string>
+    <string name="id_num">id num</string>
+    <string name="family_name">family name</string>
+    <string name="private_name">private name</string>
+    <string name="phone_num">phone num</string>
+    <string name="address_mail">address mail</string>
+    <string name="credit_num">credit num</string>
+    <string name="mail_address">mail address</string>
+    <string name="Models">Models</string>
+    <string name="add_model">Add Model</string>
+    <string name="model_code">model code</string>
+    <string name="model_name">model name</string>
+    <string name="company_name">company name</string>
+    <string name="engine_capacity">engine capacity</string>
+    <string name="show_Branches">Show Branches</string>
+    <string name="seats">seats</string>
+
+    <string-array name="gearbox">
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
 </resources>

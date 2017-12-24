@@ -4,11 +4,13 @@ package com.example.mailo.takengo.models.entities;
  * Created by USER on 19/11/2017.
  */
 
-public class Car {
+public class Car extends Branch {
+
+    int carNum;
     int branchNum;
     int carModel;
     float kilometers;
-    int carNum;
+
 
     public Car() {//empty constructor
         this.branchNum =0 ;
@@ -66,6 +68,30 @@ public class Car {
 
     public void setCarNum(int carNum) {
         this.carNum = carNum;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Car car = (Car) o;
+
+        if (branchNum != car.branchNum) return false;
+        if (carModel != car.carModel) return false;
+        if (Float.compare(car.kilometers, kilometers) != 0) return false;
+        return carNum == car.carNum;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "branchNum=" + branchNum +
+                ", carModel=" + carModel +
+                ", kilometers=" + kilometers +
+                ", carNum=" + carNum +
+                '}';
     }
 }
 

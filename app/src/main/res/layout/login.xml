@@ -2,87 +2,101 @@
     <RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
         xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height = "match_parent"
-       tools:context = "com.example.mailo.takengo.controllers.Login">
+       tools:context = "com.example.mailo.takengo.controllers.Login"
+        android:id="@+id/baseRelativeLayout">
 
         <TextView
             android:id="@+id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imageView"
+            android:fontFamily="casual"
             android:text="@string/Login"
-            android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textColor="@color/colorAccent"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textview"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="18sp"
         android:text="@string/TakeAndGo"
-        android:textSize="55sp" />
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="100sp"
+        android:typeface="normal" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:focusable="true"
+        android:fontFamily="casual"
         android:hint="@string/EnterName"
+        android:textColor="@color/colorAccent"
         android:textColorHighlight="#ff7eff15"
         android:textColorHint="@android:color/holo_orange_dark"
-        android:textSize="23sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/textview"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="100dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/abc"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:contentDescription="@string/login"/>
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/login"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_2" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText"
         android:ems="10"
+        android:fontFamily="casual"
         android:hint="@string/Password"
         android:inputType="textPassword"
         android:textColorHint="@android:color/holo_orange_dark"
-        android:textSize="23sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/textView"
         android:layout_below="@+id/editText2"
-        android:layout_marginTop="22dp"
-        android:layout_toStartOf="@+id/textview"
+        android:layout_marginStart="25dp"
+        android:background="@color/colorAccent"
         android:text="@string/login"
         android:textColorLink="@color/colorPrimary"
-        android:textIsSelectable="false"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/imageView"
-        android:text="@string/Cancel"
-        android:textStyle="bold"
-        android:layout_alignBottom="@+id/button" />
+        style="@android:style/Widget.Button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_below="@+id/editText2"
+        android:layout_marginEnd="19dp"
+        android:background="@color/colorAccent"
+        android:text="@string/SignUp"
+        android:textStyle="bold" />
 
     </RelativeLayout>

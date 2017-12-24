@@ -4,10 +4,54 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon_2"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"></application>
+        android:theme="@style/AppTheme">
+        <activity android:name=".controllers.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controllers.Customer">
+            <intent-filter>
+                <action android:name="android.intent.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controllers.Branch" />
+        <activity android:name=".controllers.Main">
+            <intent-filter>
+                <action android:name="android.intent.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controllers.add_car">
+            <intent-filter>
+                <action android:name="android.intent.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controllers.Car">
+            <intent-filter>
+                <action android:name="android.intent.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controllers.Model" />
+        <activity android:name=".controllers.list_cars" />
+        <activity android:name=".controllers.add_customer" />
+        <activity android:name=".controllers.list_customers" />
+        <activity android:name=".controllers.add_model" />
+        <activity android:name=".controllers.list_branches" />
+        <activity android:name=".controllers.list_models"></activity>
+    </application>
 
 </manifest>

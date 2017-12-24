@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout1"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.mailo.takengo.controllers.list_cars">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" car num     car model     branch num     kilometers "
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight="0.89" />
+
+
+</LinearLayout>

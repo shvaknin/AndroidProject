@@ -14,14 +14,16 @@ public class CarModel {
 
     public CarModel() {//empty constructor
         this.modelCode = 0;
-        this.companyName ="" ;
+        this.companyName = "";
         this.modelName = "";
         this.engineCapacity = 0;
-        this.gearbox =Gearbox.Automatic ;
-        this.seats =0 ;
+        this.gearbox = Gearbox.Automatic;
+        this.seats = 0;
     }
+
     /**
      * constructor
+     *
      * @param modelCode
      * @param companyName
      * @param modelName
@@ -39,8 +41,8 @@ public class CarModel {
     }
 
     /**
-     *getter & setter
-     * */
+     * getter & setter
+     */
     public int getModelCode() {
         return modelCode;
     }
@@ -87,6 +89,27 @@ public class CarModel {
 
     public void setSeats(int seats) {
         this.seats = seats;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CarModel carModel = (CarModel) o;
+
+        if (modelCode != carModel.modelCode) return false;
+        if (Float.compare(carModel.engineCapacity, engineCapacity) != 0) return false;
+        if (seats != carModel.seats) return false;
+        if (!companyName.equals(carModel.companyName)) return false;
+        if (!modelName.equals(carModel.modelName)) return false;
+        return gearbox == carModel.gearbox;
+
+    }
+
+    @Override
+    public String toString() {
+        return  modelName+" " + modelCode;
     }
 }
 

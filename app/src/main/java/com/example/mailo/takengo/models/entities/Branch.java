@@ -1,17 +1,21 @@
 package com.example.mailo.takengo.models.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by USER on 19/11/2017.
  */
 
-public class Branch {
+public class Branch implements Serializable {
+
     int numOfParkingSpaces;
     int numBranch;
+    //address:
     String city;
     String street;
     int number;
 
-    public Branch() {
+    public Branch() {//empty constructor
         this.numOfParkingSpaces = 0;
         this.numBranch = 0;
         this.city = "";
@@ -19,7 +23,7 @@ public class Branch {
         this.number = 0;
     }
 
-    public Branch(int numOfParkingSpaces, int numBranch, String city, String street, int number) {
+    public Branch(int numOfParkingSpaces, int numBranch, String city, String street, int number) {//parameter constructor
         this.numOfParkingSpaces = numOfParkingSpaces;
         this.numBranch = numBranch;
         this.city = city;
@@ -65,6 +69,32 @@ public class Branch {
 
     public void setNumBranch(int numBranch) {
         this.numBranch = numBranch;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Branch branch = (Branch) o;
+
+        if (numOfParkingSpaces != branch.numOfParkingSpaces) return false;
+        if (numBranch != branch.numBranch) return false;
+        if (number != branch.number) return false;
+        if (!city.equals(branch.city)) return false;
+        return street.equals(branch.street);
+
+    }
+
+    @Override
+    public String toString() {
+        return "Branch{" +
+                "numOfParkingSpaces=" + numOfParkingSpaces +
+                ", numBranch=" + numBranch +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", number=" + number +
+                '}';
     }
 }
 

@@ -22,7 +22,10 @@ public class Constants {
         public static final String CITY="city";
         public static final String STREET="street";
         public static final String NUMBER="number";
-    }
+      final static String Branch_key="com.example.mailo.takengo.models.entities;";
+
+
+  }
     public static class CarConst{
         public static final String BRANCH_NUM="branchNum";
         public static final String CAR_MODEL="carModel";
@@ -54,7 +57,7 @@ public class Constants {
         public static final String PASSWORD  = "password";
     }
     public static ContentValues UserToContentValues(User user){
-        ContentValues contentValues = new ContentValues();
+         ContentValues contentValues = new ContentValues();
         contentValues.put(Constants.UserConst.USER_NAME,user.getUserName());
         contentValues.put(Constants.UserConst.PASSWORD,user.getPassword());
         return contentValues;
@@ -157,4 +160,5 @@ public static Customer ContentValuesToCustomer(ContentValues contentValues) {
         customer.setCreditNum(contentValues.getAsInteger(Constants.CustomerConst.CREDIT_NUM));
         return customer;}
 
-}
+
+     }

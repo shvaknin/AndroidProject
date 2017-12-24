@@ -5,9 +5,10 @@ package com.example.mailo.takengo.models.entities;
  */
 
 public class Customer {
+
+        int idNum;
         String familyName;
         String privateName;
-        int idNum;
         int phoneNum;
         String addressMail;
         int creditNum;
@@ -90,4 +91,33 @@ public class Customer {
         public void setCreditNum(int creditNum) {
             this.creditNum = creditNum;
         }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Customer customer = (Customer) o;
+
+        if (idNum != customer.idNum) return false;
+        if (phoneNum != customer.phoneNum) return false;
+        if (creditNum != customer.creditNum) return false;
+        if (!familyName.equals(customer.familyName)) return false;
+        if (!privateName.equals(customer.privateName)) return false;
+        return addressMail.equals(customer.addressMail);
+
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "familyName='" + familyName + '\'' +
+                ", privateName='" + privateName + '\'' +
+                ", idNum=" + idNum +
+                ", phoneNum=" + phoneNum +
+                ", addressMail='" + addressMail + '\'' +
+                ", creditNum=" + creditNum +
+                '}';
+    }
+
+}

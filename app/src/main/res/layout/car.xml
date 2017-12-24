@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mailo.takengo.controllers.Customer">
+    tools:context="com.example.mailo.takengo.controllers.Car">
 
 
     <TextView
-        android:id="@+id/branch"
+        android:id="@+id/car"
         android:layout_width="395dp"
         android:layout_height="67dp"
         android:layout_marginLeft="8dp"
@@ -16,7 +16,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="casual"
         android:lineSpacingExtra="24sp"
-        android:text="@string/branches"
+        android:text="@string/cars"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/colorPrimary"
@@ -26,18 +26,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/show_Branches"
+        android:id="@+id/add_car"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="180dp"
+        android:layout_width="176dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/show_Branches"
+        android:layout_marginTop="102dp"
+        android:text="Add Car"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/branch"
-        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/car" />
+
+    <Button
+        android:id="@+id/show_cars"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="102dp"
+        android:text="Show Cars"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintLeft_toRightOf="@+id/add_car"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.483" />
+        app:layout_constraintTop_toBottomOf="@+id/car" />
 </android.support.constraint.ConstraintLayout>
